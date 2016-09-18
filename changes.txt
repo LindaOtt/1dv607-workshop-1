@@ -1,0 +1,15 @@
+I have made these changes in my model, after receiving feedback in the peer review.
+
+- I removed the role attribute from the User object, and instead added three new objects. I named them Member, Secretary and Treasurer. I did this since both Simon Palmqvist and Rasmus Karlsson (the two students who peer reviewed my model) thought that the User object was unclear and/or difficult to understand.
+
+- I removed the "private visibility" markers in front of the attributes since it is assumed that the attributes are private if they're not included.
+
+- I added ": [0..1]" after the Image attribute in the Boat object to indicate that this attribute was optional.
+
+- I added the associations "Changes" and "Removes" between Member and Boat to better support use cases five and six in the requirements.
+
+- I added the association "Books" between Secretary and Berth to better support use case 8.
+
+- I changed the object "Calendar" to "Calendar Event" and removed the attribute "Event", since Simon Palmqvist thought that the attribute "Event" should be a conceptual class. I didn't keep the Calendar class since it is just reporting the Calendar Events.
+
+- I added an association called "Manages" between the objects "Secretary" and "Calendar Event" to better support use case 10.
